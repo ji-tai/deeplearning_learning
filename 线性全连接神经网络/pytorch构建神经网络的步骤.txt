@@ -1,0 +1,14 @@
+1.prepare dataset
+2.design model using Class（计算y_hat）
+3.Construct loss and optimizer（计算loss,并且进行梯度优化）
+4.Training cycle
+    >>>forward->loss
+    >>>backward->grad
+    >>>updata
+
+一.基本的数据类型
+    1.tensor--表示张量
+        >>>基本属性：shape(获得tensor的形状，例：torch.Size([2, 3])--表示两个样本每个样本中有三个特征)
+                    dtype(数据类型：torch.float16，torch.float32，torch.float64，torch.int8，torch.int16，torch.int32，torch.int64，torch.bool)--只有小数形式的数据才可以进行求导，因为非连续的数据无法进行微积分
+                    device(获得张量计算的位置：比如cpu,gpu:0)
+        

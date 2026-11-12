@@ -1,0 +1,190 @@
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1500" height="580"
+     viewBox="0 0 1500 580">
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10"
+            refX="8" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#c43e16"/>
+    </marker>
+    <style>
+      .text {
+        font-family: Arial, "Microsoft YaHei", sans-serif;
+        fill: #454545;
+      }
+      .cell-text {
+        font-size: 29px;
+        text-anchor: middle;
+        dominant-baseline: middle;
+      }
+      .heading {
+        font-size: 31px;
+        text-anchor: middle;
+      }
+      .arrow {
+        stroke: #c43e16;
+        stroke-width: 5;
+        fill: none;
+        marker-end: url(#arrow);
+      }
+      .grid {
+        stroke: #88633d;
+        stroke-width: 1.8;
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1500" height="580" fill="#ffffff"/>
+
+  <!-- 1. Input -->
+  <g>
+    <rect x="65" y="40" width="75" height="350"
+          fill="#e2eedb" stroke="#777" stroke-width="2"/>
+
+    <g class="text cell-text" fill="#405a35">
+      <text x="102.5" y="75">h</text>
+      <text x="102.5" y="145">e</text>
+      <text x="102.5" y="215">l</text>
+      <text x="102.5" y="285">l</text>
+      <text x="102.5" y="355">o</text>
+    </g>
+
+    <g stroke="#777" stroke-width="1.5">
+      <path d="M65 110 H140"/>
+      <path d="M65 180 H140"/>
+      <path d="M65 250 H140"/>
+      <path d="M65 320 H140"/>
+    </g>
+
+    <text x="102" y="465" class="text heading">Input</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <path d="M195 215 H325" class="arrow"/>
+
+  <!-- 2. Dictionary -->
+  <g>
+    <rect x="390" y="65" width="440" height="300"
+          fill="#fff0c9" stroke="#88633d" stroke-width="2"/>
+
+    <rect x="390" y="65" width="440" height="60"
+          fill="#896000"/>
+
+    <path d="M610 65 V365" class="grid"/>
+    <path d="M390 125 H830 M390 185 H830
+             M390 245 H830 M390 305 H830"
+          class="grid"/>
+
+    <g fill="#ffffff" font-size="29" font-weight="bold"
+       text-anchor="middle" dominant-baseline="middle">
+      <text x="500" y="95">character</text>
+      <text x="720" y="95">index</text>
+    </g>
+
+    <g class="text cell-text">
+      <text x="500" y="155">e</text>
+      <text x="500" y="215">h</text>
+      <text x="500" y="275">l</text>
+      <text x="500" y="335">o</text>
+
+      <text x="720" y="155">0</text>
+      <text x="720" y="215">1</text>
+      <text x="720" y="275">2</text>
+      <text x="720" y="335">3</text>
+    </g>
+
+    <text x="610" y="465" class="text heading">Dictionary</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <path d="M890 215 H1000" class="arrow"/>
+
+  <!-- 3. Indices -->
+  <g>
+    <rect x="1050" y="40" width="75" height="350"
+          fill="#e2eedb" stroke="#777" stroke-width="2"/>
+
+    <g stroke="#777" stroke-width="1.5">
+      <path d="M1050 110 H1125"/>
+      <path d="M1050 180 H1125"/>
+      <path d="M1050 250 H1125"/>
+      <path d="M1050 320 H1125"/>
+    </g>
+
+    <g class="text cell-text">
+      <text x="1087.5" y="75">1</text>
+      <text x="1087.5" y="145">0</text>
+      <text x="1087.5" y="215">2</text>
+      <text x="1087.5" y="285">2</text>
+      <text x="1087.5" y="355">3</text>
+    </g>
+
+    <text x="1087" y="465" class="text heading">Indices</text>
+  </g>
+
+  <!-- Arrows to one-hot -->
+  <g stroke="#c43e16" stroke-width="2.5"
+     fill="none" marker-end="url(#arrow)">
+    <path d="M1125 75 H1260"/>
+    <path d="M1125 145 H1260"/>
+    <path d="M1125 215 H1260"/>
+    <path d="M1125 285 H1260"/>
+    <path d="M1125 355 H1260"/>
+  </g>
+
+  <!-- 4. One-Hot Vectors -->
+  <g>
+    <rect x="1260" y="40" width="200" height="350"
+          fill="#fce4d2" stroke="#96613e" stroke-width="2"/>
+
+    <!-- Vertical lines -->
+    <g class="grid">
+      <path d="M1310 40 V390"/>
+      <path d="M1360 40 V390"/>
+      <path d="M1410 40 V390"/>
+
+      <!-- Horizontal lines -->
+      <path d="M1260 110 H1460"/>
+      <path d="M1260 180 H1460"/>
+      <path d="M1260 250 H1460"/>
+      <path d="M1260 320 H1460"/>
+    </g>
+
+    <!-- One hot values -->
+    <g class="text cell-text">
+      <!-- h = 1 -->
+      <text x="1285" y="75">0</text>
+      <text x="1335" y="75">1</text>
+      <text x="1385" y="75">0</text>
+      <text x="1435" y="75">0</text>
+
+      <!-- e = 0 -->
+      <text x="1285" y="145">1</text>
+      <text x="1335" y="145">0</text>
+      <text x="1385" y="145">0</text>
+      <text x="1435" y="145">0</text>
+
+      <!-- l = 2 -->
+      <text x="1285" y="215">0</text>
+      <text x="1335" y="215">0</text>
+      <text x="1385" y="215">1</text>
+      <text x="1435" y="215">0</text>
+
+      <!-- l = 2 -->
+      <text x="1285" y="285">0</text>
+      <text x="1335" y="285">0</text>
+      <text x="1385" y="285">1</text>
+      <text x="1435" y="285">0</text>
+
+      <!-- o = 3 -->
+      <text x="1285" y="355">0</text>
+      <text x="1335" y="355">0</text>
+      <text x="1385" y="355">0</text>
+      <text x="1435" y="355">1</text>
+    </g>
+
+    <text x="1360" y="465" class="text heading">One-Hot Vectors</text>
+  </g>
+</svg>

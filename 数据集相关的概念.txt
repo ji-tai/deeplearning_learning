@@ -1,0 +1,7 @@
+当使用mini-batch的方法进行训练时所需的循环是
+for epoch in range(training_epochs):   ---训练的轮次
+    for i in range(total_batch):       ---所有batch的数量 
+
+range函数：range(start, stop, step) ----step可以是步数，返回的是一个可迭代的对象
+batch_size:一个batch中数据的数量
+iteration:total_batch

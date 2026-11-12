@@ -1,0 +1,211 @@
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1500" height="700"
+     viewBox="0 0 1500 700">
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10"
+            refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#444"/>
+    </marker>
+  </defs>
+
+  <!-- ================= 连线：时间方向 ================= -->
+
+  <!-- 第一层 -->
+  <g stroke="#444" stroke-width="2.5" fill="none"
+     marker-end="url(#arrow)">
+    <path d="M375 510 H445"/>
+    <path d="M595 510 H665"/>
+    <path d="M815 510 H885"/>
+    <path d="M1035 510 H1080" marker-end="none"/>
+    <path d="M1170 510 H1245"/>
+
+    <!-- 第二层 -->
+    <path d="M375 360 H445"/>
+    <path d="M595 360 H665"/>
+    <path d="M815 360 H885"/>
+    <path d="M1035 360 H1080" marker-end="none"/>
+    <path d="M1170 360 H1245"/>
+
+    <!-- 第三层 -->
+    <path d="M375 210 H445"/>
+    <path d="M595 210 H665"/>
+    <path d="M815 210 H885"/>
+    <path d="M1035 210 H1080" marker-end="none"/>
+    <path d="M1170 210 H1245"/>
+  </g>
+
+  <!-- ================= 连线：层间传递 ================= -->
+
+  <g stroke="#444" stroke-width="2.5" fill="none"
+     marker-end="url(#arrow)">
+    <!-- 第一层到第二层 -->
+    <path d="M300 470 V445"/>
+    <path d="M520 470 V445"/>
+    <path d="M740 470 V445"/>
+    <path d="M960 470 V445"/>
+    <path d="M1320 470 V445"/>
+
+    <!-- 第二层到第三层 -->
+    <path d="M300 320 V295"/>
+    <path d="M520 320 V295"/>
+    <path d="M740 320 V295"/>
+    <path d="M960 320 V295"/>
+    <path d="M1320 320 V295"/>
+  </g>
+
+  <!-- ================= 初始隐藏状态 ================= -->
+
+  <g stroke="#304c78" stroke-width="3" fill="#e5edfc">
+    <circle cx="130" cy="210" r="32"/>
+    <circle cx="130" cy="360" r="32"/>
+    <circle cx="130" cy="510" r="32"/>
+  </g>
+
+  <g font-size="27" font-style="italic"
+     fill="#263d63" text-anchor="middle">
+    <text x="130" y="219">h₀³</text>
+    <text x="130" y="369">h₀²</text>
+    <text x="130" y="519">h₀¹</text>
+  </g>
+
+  <g stroke="#444" stroke-width="2.5"
+     fill="none" marker-end="url(#arrow)">
+    <path d="M162 210 H225"/>
+    <path d="M162 360 H225"/>
+    <path d="M162 510 H225"/>
+  </g>
+
+  <!-- ================= RNN Cell ================= -->
+
+  <!-- 第三层 -->
+  <g fill="#fce3d2" stroke="#96501f" stroke-width="3">
+    <rect x="225" y="170" width="150" height="80"/>
+    <rect x="445" y="170" width="150" height="80"/>
+    <rect x="665" y="170" width="150" height="80"/>
+    <rect x="885" y="170" width="150" height="80"/>
+    <rect x="1245" y="170" width="150" height="80"/>
+  </g>
+
+  <!-- 第二层 -->
+  <g fill="#fff0c9" stroke="#98731c" stroke-width="3">
+    <rect x="225" y="320" width="150" height="80"/>
+    <rect x="445" y="320" width="150" height="80"/>
+    <rect x="665" y="320" width="150" height="80"/>
+    <rect x="885" y="320" width="150" height="80"/>
+    <rect x="1245" y="320" width="150" height="80"/>
+  </g>
+
+  <!-- 第一层 -->
+  <g fill="#e0efd9" stroke="#526b45" stroke-width="3">
+    <rect x="225" y="470" width="150" height="80"/>
+    <rect x="445" y="470" width="150" height="80"/>
+    <rect x="665" y="470" width="150" height="80"/>
+    <rect x="885" y="470" width="150" height="80"/>
+    <rect x="1245" y="470" width="150" height="80"/>
+  </g>
+
+  <!-- RNN Cell 文字 -->
+  <g font-size="25" font-weight="bold"
+     text-anchor="middle" dominant-baseline="middle">
+    <g fill="#87451b">
+      <text x="300" y="210">RNN Cell</text>
+      <text x="520" y="210">RNN Cell</text>
+      <text x="740" y="210">RNN Cell</text>
+      <text x="960" y="210">RNN Cell</text>
+      <text x="1320" y="210">RNN Cell</text>
+    </g>
+    <g fill="#765510">
+      <text x="300" y="360">RNN Cell</text>
+      <text x="520" y="360">RNN Cell</text>
+      <text x="740" y="360">RNN Cell</text>
+      <text x="960" y="360">RNN Cell</text>
+      <text x="1320" y="360">RNN Cell</text>
+    </g>
+    <g fill="#344b2c">
+      <text x="300" y="510">RNN Cell</text>
+      <text x="520" y="510">RNN Cell</text>
+      <text x="740" y="510">RNN Cell</text>
+      <text x="960" y="510">RNN Cell</text>
+      <text x="1320" y="510">RNN Cell</text>
+    </g>
+  </g>
+
+  <!-- ================= 省略号 ================= -->
+
+  <g font-size="30" fill="#444" text-anchor="middle">
+    <text x="1125" y="219">······</text>
+    <text x="1125" y="369">······</text>
+    <text x="1125" y="519">······</text>
+  </g>
+
+  <!-- ================= 输入 x ================= -->
+
+  <g stroke="#98731c" stroke-width="3" fill="#fff0c9">
+    <circle cx="300" cy="650" r="32"/>
+    <circle cx="520" cy="650" r="32"/>
+    <circle cx="740" cy="650" r="32"/>
+    <circle cx="960" cy="650" r="32"/>
+    <circle cx="1320" cy="650" r="32"/>
+  </g>
+
+  <g font-size="27" font-style="italic"
+     fill="#765510" text-anchor="middle">
+    <text x="300" y="659">x₁</text>
+    <text x="520" y="659">x₂</text>
+    <text x="740" y="659">x₃</text>
+    <text x="960" y="659">x₄</text>
+    <text x="1320" y="659">xₙ</text>
+  </g>
+
+  <g stroke="#444" stroke-width="2.5"
+     fill="none" marker-end="url(#arrow)">
+    <path d="M300 618 V555"/>
+    <path d="M520 618 V555"/>
+    <path d="M740 618 V555"/>
+    <path d="M960 618 V555"/>
+    <path d="M1320 618 V555"/>
+  </g>
+
+  <!-- ================= 输出隐藏状态 ================= -->
+
+  <g stroke="#444" stroke-width="2.5"
+     fill="none" marker-end="url(#arrow)">
+    <path d="M300 170 V95"/>
+    <path d="M520 170 V95"/>
+    <path d="M740 170 V95"/>
+    <path d="M960 170 V95"/>
+    <path d="M1320 170 V95"/>
+
+    <path d="M1395 210 H1420"/>
+    <path d="M1395 360 H1420"/>
+    <path d="M1395 510 H1420"/>
+  </g>
+
+  <g stroke="#304c78" stroke-width="3" fill="#e5edfc">
+    <circle cx="300" cy="55" r="32"/>
+    <circle cx="520" cy="55" r="32"/>
+    <circle cx="740" cy="55" r="32"/>
+    <circle cx="960" cy="55" r="32"/>
+    <circle cx="1320" cy="55" r="32"/>
+
+    <circle cx="1455" cy="210" r="32"/>
+    <circle cx="1455" cy="360" r="32"/>
+    <circle cx="1455" cy="510" r="32"/>
+  </g>
+
+  <g font-size="27" font-style="italic"
+     fill="#263d63" text-anchor="middle">
+    <text x="300" y="64">h₁</text>
+    <text x="520" y="64">h₂</text>
+    <text x="740" y="64">h₃</text>
+    <text x="960" y="64">h₄</text>
+    <text x="1320" y="64">hₙ</text>
+
+    <text x="1455" y="219">hₙ³</text>
+    <text x="1455" y="369">hₙ²</text>
+    <text x="1455" y="519">hₙ¹</text>
+  </g>
+
+</svg>

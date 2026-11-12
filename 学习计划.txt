@@ -1,0 +1,7 @@
+教材
+    1.《Deep Learning》（花书）
+    2.《Dive into Deep Learning》（动手学深度学习）
+    3.《The Illustrated Transformer》
+视频
+    1.吴恩达 Deep Learning Specialization
+    2.吴恩达 Deep Learning Specialization

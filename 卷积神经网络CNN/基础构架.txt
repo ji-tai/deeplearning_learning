@@ -1,0 +1,9 @@
+输入 -> Feature Extraction -> classfication
+    >>>Feature Extraction:特征提取
+        >Subsampling：下采样（从原来的数据中抽取出来一点，一般方法是池化）
+        >convolution：卷积（卷积）
+    >>>classfication:分类器
+        >将一个线性的数据最终映射到需要的多分类的结果中去
+kernel tensor is （n,3，3）//一般，n为图像的channel
+    ->输出是1*（w-2）(h-2)
+        如果需要m个channel的结果，那么就需要m个filter----由n个kernel
