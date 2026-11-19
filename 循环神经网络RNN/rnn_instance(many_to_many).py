@@ -36,7 +36,7 @@ one_hot_lookup = [
     [0, 0, 0, 1]
 ]
 
-inputs = torch.tensor([one_hot_lookup[x] for x in x_data],dtype=torch.float32).view(-1, batch_size, input_size)# (seq_len_2,1,input_size_4)
+inputs = torch.tensor([one_hot_lookup[x] for x in x_data],dtype=torch.float32).view(-1, batch_size, input_size)# (seq_len_2,batch_size_1,input_size_4)
 
 labels = torch.tensor(y_data, dtype=torch.long)
 
